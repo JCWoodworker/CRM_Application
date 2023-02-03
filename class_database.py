@@ -30,14 +30,14 @@ class Database:
       cursor.close()
       conn.close()
   
-  def add_customer(self, first_name, last_name, cell, email, street_address, city, state, zip):
+  def add_customer(self, first_name, last_name, cell, email, street, city, state, zip):
     conn = self.connect_to_database()
     cursor = conn.cursor()
     try:
       cursor.execute(
           f"""
-          INSERT INTO customers (first_name, last_name, cell, email, street_address, city, state, zip)
-          VALUES ('{first_name}', '{last_name}', '{cell}', '{email}', '{street_address}', '{city}', '{state}', '{zip}');
+          INSERT INTO customers (first_name, last_name, cell, email, street, city, state, zip)
+          VALUES ('{first_name}', '{last_name}', '{cell}', '{email}', '{street}', '{city}', '{state}', '{zip}');
       """
       )
       conn.commit()

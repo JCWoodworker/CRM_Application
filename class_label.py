@@ -14,3 +14,6 @@ class Label:
 
     self.label = tk.Label(self.frame, text=self.text, bg=self.bg, fg=self.fg, font=("Arial Bold", 22))
     self.label.grid(row=self.row, column=self.column, padx=self.padx, pady=self.pady, sticky=self.sticky)
+
+  def change_text(self, text):
+    self.label.config(text=text)
