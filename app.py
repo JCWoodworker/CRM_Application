@@ -1,6 +1,7 @@
 import tkinter as tk
 from class_button import Button
 from class_label import Label
+from class_database import Database
 
 
 class App(tk.Tk):
