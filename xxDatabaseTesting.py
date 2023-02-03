@@ -1,7 +1,7 @@
 import psycopg2
 
 # This module's sole purpose is to test the database connection, create a table, and add some data to it
-
+# If you're copying this repo, you'll need to create your own Postgres database and user with the appropriate permissions to create tables and insert data into them
 
 def connect_to_database():
     try:
