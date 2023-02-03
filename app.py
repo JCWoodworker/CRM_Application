@@ -69,9 +69,10 @@ class App(tk.Tk):
 
     # #### FRAME LABELS ####
 
-    self.label1 = Label(self.main_upper_frame, "Title Bar", "white", "black", 0, 0, 0, 0, "ew")
-    self.label2 = Label(self.main_middle_right_frame, "Customer Information", "white", "black", 0, 0, 0, 0, "ew")
-    self.label3 = Label(self.main_middle_left_frame, "Customer List", "white", "black", 0, 0, 0, 0, "ew")
+    self.label1 = Label(self.main_upper_frame, "Title Bar", "red", "black", 0, 0, 0, 0, "ew")
+    self.label2 = Label(self.main_middle_right_frame, "Customer Information", "orange", "black", 0, 0, 0, 0, "ew")
+    self.label3 = Label(self.main_middle_left_frame, "Customer List", "purple", "black", 0, 0, 0, 0, "ew")
+    self.label4 = Label(self.main_lower_frame, "Footer Bar", "green", "black", 0, 0, 0, 0, "ew")
 
     #### LISTBOX WITH SCROLLBAR ####
 
@@ -84,7 +85,7 @@ class App(tk.Tk):
 
     #### Sample Customer List ####
 
-    for i in range(100):
+    for i in range(50):
       self.listbox.insert("end", f"Customer {i}")
 
 app = App()
