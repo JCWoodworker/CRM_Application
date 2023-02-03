@@ -1,5 +1,8 @@
 from class_customer import Customer
 
+# This is just a file for testing the functionality of the Customer class
+# It will be deleted eventually
+
 john_smith = Customer(
     "John",
     "Smith",
