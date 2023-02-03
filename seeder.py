@@ -58,3 +58,43 @@ def seed_database():
       "MO",
       "69696",
   )
+  database.add_customer(
+      "Mazie",
+      "Sookie",
+      "555-555-5555",
+      "sookie@fake.com",
+      "5 Past St",
+      "Anytown",
+      "CA",
+      "12345",
+  )
+  database.add_customer(
+      "Manny",
+      "Jordan",
+      "555-555-5555",
+      "jordan@fake.com",
+      "34 Sommerville Ave",
+      "Somwhere",
+      "CO",
+      "34343",
+  )
+  database.add_customer(
+      "Sammy",
+      "Footsmith",
+      "555-555-5555",
+      "footsmith@fake.com",
+      "44 Mickey Lane",
+      "Anotherton",
+      "TX",
+      "13345",
+  )
+  database.add_customer(
+      "Ricky",
+      "Connor",
+      "555-555-5555",
+      "connor@fake.com",
+      "342 Sixth Ave",
+      "Oppositeville",
+      "NY",
+      "69696",
+  )

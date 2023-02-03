@@ -64,7 +64,7 @@ class App(tk.Tk):
 
     # #### FRAME LABELS ####
 
-    self.label1 = Label(self.main_upper_frame, "Title Bar", "black", "orange", 0, 0, 10, 10, "ew")
+    self.label1 = Label(self.main_upper_frame, "JC's Customer Management System", "black", "orange", 0, 0, 10, 10, "ew")
     self.label2 = Label(self.main_middle_right_frame, "Customer Information", "black", "orange", 0, 0, 10, 10, "ew")
     self.label3 = Label(self.main_middle_left_frame, "Customer List", "orange", "black", 0, 0, 0, 0, "ew")
     self.label4 = Label(self.main_lower_frame, "Footer Bar", "black", "orange", 0, 0, 10, 10, "ew")
