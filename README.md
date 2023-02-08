@@ -1,5 +1,7 @@
 # tkinter_framework
 ### Building the skeleton of an executable CRM desktop app using tkinter
+ * Clone this repository and run app.py to try it out!
+ * LOTS of work to do and features to add so please check back often!!
 
 ## CRM ("Customer Relationship Management")
 * Top features:
