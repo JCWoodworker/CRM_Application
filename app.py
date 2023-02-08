@@ -64,7 +64,7 @@ class App(tk.Tk):
 
     # #### FRAME LABELS ####
 
-    self.label1 = Label(self.main_upper_frame, "Title Bar", "black", "orange", 0, 0, 10, 10, "ew")
+    self.label1 = Label(self.main_upper_frame, "JC's Customer Management System", "black", "orange", 0, 0, 10, 10, "ew")
     self.label2 = Label(self.main_middle_right_frame, "Customer Information", "black", "orange", 0, 0, 10, 10, "ew")
     self.label3 = Label(self.main_middle_left_frame, "Customer List", "orange", "black", 0, 0, 0, 0, "ew")
     self.label4 = Label(self.main_lower_frame, "Footer Bar", "black", "orange", 0, 0, 10, 10, "ew")
@@ -82,9 +82,21 @@ class App(tk.Tk):
     seed_database()
     db = Database()
     customers = db.fetch_customers()
-
     for customer in customers:
       self.listbox.insert("end", f"{customer.first_name} {customer.last_name}")
+
+
+    #### CUSTOMER INFORMATION TEXT BOX ####
+    self.customer_information = tk.Text(self.main_middle_right_frame, height=10, width=50, font=("Arial", 18))
+    self.customer_information.grid(row=1, column=0, padx=50, pady=50, sticky="nsew")
+
+    def show_selected_customer(event):
+      selection = self.listbox.curselection()
+      self.label2.change_text(f"{customers[selection[0]].first_name} {customers[selection[0]].last_name}")
+      self.customer_information.delete("1.0", "end")
+      self.customer_information.insert("end", f"{customers[selection[0]].first_name} {customers[selection[0]].last_name}\n{customers[selection[0]].email}\n{customers[selection[0]].cell_phone}\n{customers[selection[0]].city}, {customers[selection[0]].state} {customers[selection[0]].zip_code}")
+    
+    self.listbox.bind("<<ListboxSelect>>", show_selected_customer)
 
 app = App()
 app.mainloop()
